@@ -2,7 +2,7 @@
 #task2 check if the letter vowel or not
 
 
-vowel_letters=['a','e','i','o','u','y']
+vowel_letters=['a','e','i','o','u']  
 input_Letter=input("Enter The latter : ")
 input_Letter= input_Letter.lower()             #Don't forget that it is ascii  so  (a != A)
 
