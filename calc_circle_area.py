@@ -1,6 +1,6 @@
 #said magdy     G:A3
 
-raduis=int(input("Enter the raduis of the circle : "))
+raduis=float(input("Enter the raduis of the circle : "))
 pi=3.14159
 
 def Calc_Area(rad):
