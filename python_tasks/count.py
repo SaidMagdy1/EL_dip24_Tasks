@@ -8,7 +8,7 @@ for i in ls1:
 
 print("The Count of number 4 in This List is : ",count)
 
+#better by built-in method
 
-#by built-in method
 print("The Count of number 4 in This List is : ",ls1.count(4))
 

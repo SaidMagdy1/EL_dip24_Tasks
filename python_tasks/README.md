@@ -1,3 +1,4 @@
 # Python-Tasks
 
-small tasks 
+several exercises that pushed us to review fundamental Python concepts.
+
