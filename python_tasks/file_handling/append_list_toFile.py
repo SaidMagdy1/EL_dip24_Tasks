@@ -1,4 +1,4 @@
-
+#said magdy
 testList=["said","magdy","shehata","elbasha"]
 
 with open("myFile.txt","a") as f : 
