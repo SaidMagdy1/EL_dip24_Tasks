@@ -153,6 +153,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myExc.dir/build.make CMakeFiles/myExc.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/calc.o: src/calc.cpp.o
+.PHONY : src/calc.o
+
+# target to build an object file
+src/calc.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myExc.dir/build.make CMakeFiles/myExc.dir/src/calc.cpp.o
+.PHONY : src/calc.cpp.o
+
+src/calc.i: src/calc.cpp.i
+.PHONY : src/calc.i
+
+# target to preprocess a source file
+src/calc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myExc.dir/build.make CMakeFiles/myExc.dir/src/calc.cpp.i
+.PHONY : src/calc.cpp.i
+
+src/calc.s: src/calc.cpp.s
+.PHONY : src/calc.s
+
+# target to generate assembly for a file
+src/calc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myExc.dir/build.make CMakeFiles/myExc.dir/src/calc.cpp.s
+.PHONY : src/calc.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/calc.o"
+	@echo "... src/calc.i"
+	@echo "... src/calc.s"
 .PHONY : help
 
 

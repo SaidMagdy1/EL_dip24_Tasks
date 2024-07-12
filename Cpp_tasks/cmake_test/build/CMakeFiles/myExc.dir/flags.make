@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/include
 
 CXX_FLAGS = 
 

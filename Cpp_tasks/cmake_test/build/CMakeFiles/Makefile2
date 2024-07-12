@@ -81,12 +81,12 @@ clean: CMakeFiles/myExc.dir/clean
 CMakeFiles/myExc.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myExc.dir/build.make CMakeFiles/myExc.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myExc.dir/build.make CMakeFiles/myExc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/CMakeFiles --progress-num=1,2 "Built target myExc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/CMakeFiles --progress-num=1,2,3 "Built target myExc"
 .PHONY : CMakeFiles/myExc.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/myExc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/myExc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/CMakeFiles 0
 .PHONY : CMakeFiles/myExc.dir/rule
