@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/myExc.dir/main.cpp.o -o myExc 
