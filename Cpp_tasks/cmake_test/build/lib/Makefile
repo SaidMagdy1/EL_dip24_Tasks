@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/CMakeFiles /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/CMakeFiles /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/lib//CMakeFiles/progress.marks
+	cd /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,92 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named myExc
+# Convenience name for target.
+lib/CMakeFiles/base_lib.dir/rule:
+	cd /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/base_lib.dir/rule
+.PHONY : lib/CMakeFiles/base_lib.dir/rule
 
-# Build rule for target.
-myExc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 myExc
-.PHONY : myExc
-
-# fast build rule for target.
-myExc/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/myExc.dir/build.make CMakeFiles/myExc.dir/build
-.PHONY : myExc/fast
-
-#=============================================================================
-# Target rules for targets named base_lib
-
-# Build rule for target.
-base_lib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 base_lib
+# Convenience name for target.
+base_lib: lib/CMakeFiles/base_lib.dir/rule
 .PHONY : base_lib
 
 # fast build rule for target.
 base_lib/fast:
-	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/base_lib.dir/build.make lib/CMakeFiles/base_lib.dir/build
+	cd /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/base_lib.dir/build.make lib/CMakeFiles/base_lib.dir/build
 .PHONY : base_lib/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+base.o: base.cpp.o
+.PHONY : base.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/myExc.dir/build.make CMakeFiles/myExc.dir/main.cpp.o
-.PHONY : main.cpp.o
+base.cpp.o:
+	cd /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/base_lib.dir/build.make lib/CMakeFiles/base_lib.dir/base.cpp.o
+.PHONY : base.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/myExc.dir/build.make CMakeFiles/myExc.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/myExc.dir/build.make CMakeFiles/myExc.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-src/calc.o: src/calc.cpp.o
-.PHONY : src/calc.o
-
-# target to build an object file
-src/calc.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/myExc.dir/build.make CMakeFiles/myExc.dir/src/calc.cpp.o
-.PHONY : src/calc.cpp.o
-
-src/calc.i: src/calc.cpp.i
-.PHONY : src/calc.i
+base.i: base.cpp.i
+.PHONY : base.i
 
 # target to preprocess a source file
-src/calc.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/myExc.dir/build.make CMakeFiles/myExc.dir/src/calc.cpp.i
-.PHONY : src/calc.cpp.i
+base.cpp.i:
+	cd /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/base_lib.dir/build.make lib/CMakeFiles/base_lib.dir/base.cpp.i
+.PHONY : base.cpp.i
 
-src/calc.s: src/calc.cpp.s
-.PHONY : src/calc.s
+base.s: base.cpp.s
+.PHONY : base.s
 
 # target to generate assembly for a file
-src/calc.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/myExc.dir/build.make CMakeFiles/myExc.dir/src/calc.cpp.s
-.PHONY : src/calc.cpp.s
+base.cpp.s:
+	cd /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/base_lib.dir/build.make lib/CMakeFiles/base_lib.dir/base.cpp.s
+.PHONY : base.cpp.s
 
 # Help Target
 help:
@@ -199,13 +163,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... base_lib"
-	@echo "... myExc"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... src/calc.o"
-	@echo "... src/calc.i"
-	@echo "... src/calc.s"
+	@echo "... base.o"
+	@echo "... base.i"
+	@echo "... base.s"
 .PHONY : help
 
 
@@ -217,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

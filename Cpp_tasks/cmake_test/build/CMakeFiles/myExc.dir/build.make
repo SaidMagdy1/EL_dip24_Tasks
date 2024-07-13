@@ -108,6 +108,7 @@ myExc_EXTERNAL_OBJECTS =
 myExc: CMakeFiles/myExc.dir/main.cpp.o
 myExc: CMakeFiles/myExc.dir/src/calc.cpp.o
 myExc: CMakeFiles/myExc.dir/build.make
+myExc: lib/libbase_lib.a
 myExc: CMakeFiles/myExc.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable myExc"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/myExc.dir/link.txt --verbose=$(VERBOSE)

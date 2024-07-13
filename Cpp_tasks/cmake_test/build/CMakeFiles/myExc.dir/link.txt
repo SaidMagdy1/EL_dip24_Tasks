@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/myExc.dir/main.cpp.o CMakeFiles/myExc.dir/src/calc.cpp.o -o myExc 
+/usr/bin/c++ -rdynamic CMakeFiles/myExc.dir/main.cpp.o CMakeFiles/myExc.dir/src/calc.cpp.o -o myExc  lib/libbase_lib.a 
