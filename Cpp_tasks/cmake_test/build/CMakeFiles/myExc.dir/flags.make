@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/include -I/home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/lib
 
-CXX_FLAGS = 
+CXX_FLAGS = -std=gnu++14
 

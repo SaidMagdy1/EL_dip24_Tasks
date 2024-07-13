@@ -1,0 +1,5 @@
+#define AUTHER "Saeed"
+
+#define STANDARD "${CMAKE_CXX_STANDARD}"
+
+#define CMTesting_VERSION_MAJOR @CMTesting_VERSION_MAJOR@
