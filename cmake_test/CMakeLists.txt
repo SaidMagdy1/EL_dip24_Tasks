@@ -16,6 +16,12 @@ else()
     message(FATAL_ERROR "file doesnt exist")
 endif()
 
+if(TARGET base_lib)
+    message(STATUS "target is here ")
+else()
+    message(FATAL_ERROR "file doesnt exist")
+endif()
+
 configure_file(defaultConfig.h.in defaultConfig.h)
 add_subdirectory(${CMAKE_SOURCE_DIR}/lib)
 add_executable(myExc ${SRC_FILES})
