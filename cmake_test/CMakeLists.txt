@@ -10,20 +10,27 @@ set(SRC_FILES
 message("SRC FILES ARE : ${SRC_FILES}")
 message("OUR Generator : ${CMAKE_GENERATOR}")
 
+
+configure_file(defaultConfig.h.in defaultConfig.h)
+add_subdirectory(${CMAKE_SOURCE_DIR}/lib)
+add_executable(myExc ${SRC_FILES})
+target_include_directories(myExc PUBLIC include/ lib/ build/)
+target_link_libraries(myExc PUBLIC base_lib)
+
+
 if(EXISTS ${CMAKE_SOURCE_DIR}/main.cpp)
     message(STATUS "file is here ")
 else()
     message(FATAL_ERROR "file doesnt exist")
 endif()
 
+
 if(TARGET base_lib)
     message(STATUS "target is here ")
 else()
-    message(FATAL_ERROR "file doesnt exist")
+    message(FATAL_ERROR "target doesnt exist")
 endif()
 
-configure_file(defaultConfig.h.in defaultConfig.h)
-add_subdirectory(${CMAKE_SOURCE_DIR}/lib)
-add_executable(myExc ${SRC_FILES})
-target_include_directories(myExc PUBLIC include/ lib/)
-target_link_libraries(myExc PUBLIC base_lib)
+if(DEBUG)
+    message(DEBUGINFO " : author is Saeed Magdy")
+endif()

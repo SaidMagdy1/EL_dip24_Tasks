@@ -1,4 +1,4 @@
-# Install script for directory: /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/lib
+# Install script for directory: /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test
+CMAKE_SOURCE_DIR = /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build
+CMAKE_BINARY_DIR = /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -98,14 +98,14 @@ lib/clean: lib/CMakeFiles/base_lib.dir/clean
 CMakeFiles/myExc.dir/all: lib/CMakeFiles/base_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myExc.dir/build.make CMakeFiles/myExc.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myExc.dir/build.make CMakeFiles/myExc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/CMakeFiles --progress-num=3,4,5 "Built target myExc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/build/CMakeFiles --progress-num=3,4,5 "Built target myExc"
 .PHONY : CMakeFiles/myExc.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/myExc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/myExc.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/build/CMakeFiles 0
 .PHONY : CMakeFiles/myExc.dir/rule
 
 # Convenience name for target.
@@ -124,14 +124,14 @@ CMakeFiles/myExc.dir/clean:
 lib/CMakeFiles/base_lib.dir/all:
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/base_lib.dir/build.make lib/CMakeFiles/base_lib.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib/CMakeFiles/base_lib.dir/build.make lib/CMakeFiles/base_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/CMakeFiles --progress-num=1,2 "Built target base_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/build/CMakeFiles --progress-num=1,2 "Built target base_lib"
 .PHONY : lib/CMakeFiles/base_lib.dir/all
 
 # Build rule for subdir invocation for target.
 lib/CMakeFiles/base_lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lib/CMakeFiles/base_lib.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/build/CMakeFiles 0
 .PHONY : lib/CMakeFiles/base_lib.dir/rule
 
 # Convenience name for target.

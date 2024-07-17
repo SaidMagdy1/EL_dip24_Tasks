@@ -3,3 +3,5 @@
 #define STANDARD "${CMAKE_CXX_STANDARD}"
 
 #define CMTesting_VERSION_MAJOR @CMTesting_VERSION_MAJOR@
+
+#define DEBUGINFO "${DEBUGINFO}"

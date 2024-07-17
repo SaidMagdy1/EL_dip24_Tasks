@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test
+CMAKE_SOURCE_DIR = /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build
+CMAKE_BINARY_DIR = /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/myExc.dir/depend.make
@@ -72,30 +72,30 @@ include CMakeFiles/myExc.dir/flags.make
 CMakeFiles/myExc.dir/main.cpp.o: CMakeFiles/myExc.dir/flags.make
 CMakeFiles/myExc.dir/main.cpp.o: ../main.cpp
 CMakeFiles/myExc.dir/main.cpp.o: CMakeFiles/myExc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/myExc.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myExc.dir/main.cpp.o -MF CMakeFiles/myExc.dir/main.cpp.o.d -o CMakeFiles/myExc.dir/main.cpp.o -c /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/myExc.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myExc.dir/main.cpp.o -MF CMakeFiles/myExc.dir/main.cpp.o.d -o CMakeFiles/myExc.dir/main.cpp.o -c /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/main.cpp
 
 CMakeFiles/myExc.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myExc.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/main.cpp > CMakeFiles/myExc.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/main.cpp > CMakeFiles/myExc.dir/main.cpp.i
 
 CMakeFiles/myExc.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myExc.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/main.cpp -o CMakeFiles/myExc.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/main.cpp -o CMakeFiles/myExc.dir/main.cpp.s
 
 CMakeFiles/myExc.dir/src/calc.cpp.o: CMakeFiles/myExc.dir/flags.make
 CMakeFiles/myExc.dir/src/calc.cpp.o: ../src/calc.cpp
 CMakeFiles/myExc.dir/src/calc.cpp.o: CMakeFiles/myExc.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/myExc.dir/src/calc.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myExc.dir/src/calc.cpp.o -MF CMakeFiles/myExc.dir/src/calc.cpp.o.d -o CMakeFiles/myExc.dir/src/calc.cpp.o -c /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/src/calc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/myExc.dir/src/calc.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myExc.dir/src/calc.cpp.o -MF CMakeFiles/myExc.dir/src/calc.cpp.o.d -o CMakeFiles/myExc.dir/src/calc.cpp.o -c /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/src/calc.cpp
 
 CMakeFiles/myExc.dir/src/calc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/myExc.dir/src/calc.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/src/calc.cpp > CMakeFiles/myExc.dir/src/calc.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/src/calc.cpp > CMakeFiles/myExc.dir/src/calc.cpp.i
 
 CMakeFiles/myExc.dir/src/calc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/myExc.dir/src/calc.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/src/calc.cpp -o CMakeFiles/myExc.dir/src/calc.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/src/calc.cpp -o CMakeFiles/myExc.dir/src/calc.cpp.s
 
 # Object files for target myExc
 myExc_OBJECTS = \
@@ -110,7 +110,7 @@ myExc: CMakeFiles/myExc.dir/src/calc.cpp.o
 myExc: CMakeFiles/myExc.dir/build.make
 myExc: lib/libbase_lib.a
 myExc: CMakeFiles/myExc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable myExc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable myExc"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/myExc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -122,6 +122,6 @@ CMakeFiles/myExc.dir/clean:
 .PHONY : CMakeFiles/myExc.dir/clean
 
 CMakeFiles/myExc.dir/depend:
-	cd /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build /home/saidmagdy/Desktop/EL_dip24_Tasks/Cpp_tasks/cmake_test/build/CMakeFiles/myExc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/build /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/build /home/saidmagdy/Desktop/EL_dip24_Tasks/cmake_test/build/CMakeFiles/myExc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/myExc.dir/depend
 
