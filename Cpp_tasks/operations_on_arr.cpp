@@ -17,11 +17,15 @@ int main()
     std::cout << "Maximum number in C  is : " << max << std::endl;    
     }();
 
+
+//******************************************************************************************************** */
 //Here we use C++ modern built-in fun
   //int max_num = *std::max_element(numbers.begin(), numbers.end());
   int max_num = *std::max_element(std::begin(arr), std::end(arr));
   std::cout << "Maximum number in C++ is : " << max_num << std::endl;
 
+
+//******************************************************************************************************** */
 //here Find a number in array   
   int number_to_find {};
   std::cout << "Enter the number we search for : " << std::endl;
@@ -36,15 +40,19 @@ int main()
     }
   
 
+//******************************************************************************************************** */
 //delete number from array 
 //auto ind=std::remove(numbers.begin(), numbers.end(),5);  
 auto ind = std::remove(std::begin(arr), std::end(arr),11);  
 size = std::distance(arr,ind);
-
 std::cout << "the new array size is : "<< size << std::endl;
 //numbers.erase(5,numbers.end());
 for(auto i : arr)
     std::cout << i << " ";
 std::cout <<std::endl;
+
+//******************************************************************************************************** */
+
+
     return 0;
 }
