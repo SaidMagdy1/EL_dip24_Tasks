@@ -34,3 +34,19 @@ endif()
 if(DEBUG)
     message(DEBUGINFO " : author is Saeed Magdy")
 endif()
+
+set(VAR 5)
+set(myVAR 10 CACHE STRING "our string")  # this also can be donr by option(myVar "comment" value)
+while(VAR)
+    message("VAR = ${VAR}")
+    math(EXPR VAR "${VAR} - 1")
+endwhile()
+#after While Var become 0
+
+function(countDown arg1)  #U parse it like ptr take it in the first time as it is so double ${} look like derefrencing
+    message("arg = ${arg1}")
+    message("arg_value = ${${arg1}}")
+endfunction(countDown arg1)
+
+countDown(VAR)
+

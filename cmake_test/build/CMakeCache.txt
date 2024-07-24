@@ -239,6 +239,9 @@ DEBUG:UNINITIALIZED=1
 //No help, variable specified on the command line.
 EBUG:UNINITIALIZED=1
 
+//our string
+myVAR:STRING=10
+
 
 ########################
 # INTERNAL cache entries
