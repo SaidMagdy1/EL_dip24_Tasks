@@ -3,19 +3,36 @@
 #include<algorithm>
 #include <vector>
 
+int max_num(int* arr,int size){
+    int max=0,value=0; 
+    for(int i=0 ;i<size;i++){  
+        value=arr[i];                  //by for-based loop
+        if(max < value)
+            max=value;
+        }
+    return max;    
+
+}
+
+
+
 int main()
 {
  int arr[]={11,52,63,94,55,76,47,28,59,10,5,89,6,1};   //as arrary 
  std::vector<int>numbers{11,52,63,94,55,76,47,28,59,10,5,89,6,1,5};  // as Vector
  int size = sizeof(arr)/sizeof(arr[0]);
- int max=0;
- [arr,&max](){                             //Use lambda and safe it to std::function
-    for(int value : arr){                           //by for-based loop
-        if(max < value)
-            max=value;
-        }
-    std::cout << "Maximum number in C  is : " << max << std::endl;    
-    }();
+
+ 
+//  int max=0;
+//  [arr,&max](){                             //Use lambda and safe it to std::function
+//     for(int value : arr){                           //by for-based loop
+//         if(max < value)
+//             max=value;
+//         }
+//     std::cout << "Maximum number in C  is : " << max << std::endl;    
+//     }();
+ std::cout << "Maximum number in C  is : " << max_num(arr,size) << std::endl;    
+
 
 
 //******************************************************************************************************** */

@@ -4,10 +4,10 @@
 class Deep{
 
  public:
-    Deep();
+
     Deep(int );
     Deep(const Deep &);
-    ~Deep();
+   ~Deep();
 
     int get_data();
 
