@@ -31,8 +31,9 @@ Move::Move(const Move &move)
 }
 
 Move::Move(Move &&move)
-    :data{move.data}
+    :data{move.data}   //here can remove this and do it in block  data = move.data then clean it (move.data = nullptr)
 {
+    
     move.data=nullptr;
     std::cout << "Move Constructor has Called.. "<< std::endl;
 
