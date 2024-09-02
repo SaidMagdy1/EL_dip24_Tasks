@@ -29,5 +29,18 @@ int main(){
 
     std::cout <<"lower_bound : " <<*std::lower_bound(V.begin(),V.end(),40)<<std::endl; //note container should be sorted
 
+    try{
+        arr[10]= 10;
+        throw "HM exception";
+    }catch(const char *e){
+        std::cout << "HM exception " << std::endl;
+    }catch(std::exception const& e){
+        std::cout << e.what() << std::endl;
+    }catch(...){
+        std::cout << "other exception " << std::endl;
+        
+    }
+
+
     return 0;
 }
