@@ -17,11 +17,12 @@ char* get_string();
 
 String& operator=(const String &rhs);
 String& operator=(String &&rhs);
-
+bool operator==(const String &rhs)const;
+String operator+(const String &rhs);
 private:
 };
 //----------------------------------
-
+// here the operatprs 
 String& String::operator=(const String &rhs){
     std::cout << "Copy Assignment" << std::endl;
     if(this == &rhs)
@@ -42,9 +43,28 @@ String& String::operator=(String &&rhs){
     return *this;
 }
 
+String String::operator+(const String &rhs){
+    std::cout << "------It is + Operator" << std::endl;
+    size_t buff_size= std::strlen(str)+std::strlen(rhs.str)+1;
+    char *buff = new char[buff_size];
+    std::strcpy(buff,str);
+    std::strcat(buff,rhs.str);
+    String temp{buff};
+    delete[] buff;
+    return temp;
+}
+
+bool String::operator==(const String &rhs)const{
+    std::cout << "------It is == Operator" << std::endl;
+    if(std::strcmp(str,rhs.str)==0)
+        return true;
+    else
+        return false;
+}
+
 
 char* String::get_string(){return str;}
-
+//  here the Constructors
 String::String()
     :str{nullptr}
 {
@@ -97,14 +117,30 @@ String::~String()
 
 
 int main(){
+std::cout << "************************"<<std::endl; 
     String str1{"said"};
     String str2;
+std::cout << "************************"<<std::endl;
     str2 = str1;
     std::cout << str2.get_string()<<std::endl;
-    str2 = "Magdy";
+std::cout << "************************"<<std::endl;
+    String str3;
+    str3 = "Magdy";
     std::cout << str2.get_string()<<std::endl;
+std::cout << "************************"<<std::endl;
     str2 =String{"shehata"};
     std::cout << str2.get_string()<<std::endl;
+std::cout << "************************"<<std::endl;
+    String str4{"said"};
+    if (str1 == str4)
+        std::cout << "They are equal"<<std::endl;
+std::cout << "************************"<<std::endl;
+    String str5;
+    str5 = str1+str2 ;
+    std::cout <<str5.get_string() <<std::endl;
+std::cout << "************************"<<std::endl;
+
+
 
 return 0;
 }
