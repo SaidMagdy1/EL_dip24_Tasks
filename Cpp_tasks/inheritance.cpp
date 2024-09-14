@@ -9,6 +9,9 @@ void greeting(){
 }
 
 int *num;
+Base(){
+    std::cout << "Base D Constructor" <<std::endl;
+}
 Base(int n , std::string name)
     :num{nullptr}
     ,name{name}
@@ -28,6 +31,9 @@ Base(int n , std::string name)
 
 class Child : public Base {
 public:
+Child(){
+    std::cout << "Child D Constructor" <<std::endl;
+}
 Child(std::string name):
     Base(5,name)
 {
@@ -59,6 +65,8 @@ int main(){
     //std::cout << *test.num <<std::endl;
     std::cout << "--Name is : "<<test2.name <<std::endl;
     test2.greeting();  //make sure that Boy inherited Base
+
+    Child T;   //will call the two Default constructors   base then child
 
 
     return 0;

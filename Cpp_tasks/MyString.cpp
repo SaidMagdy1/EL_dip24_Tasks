@@ -22,7 +22,7 @@ String operator+(const String &rhs);
 private:
 };
 //----------------------------------
-// here the operatprs 
+// here the operators 
 String& String::operator=(const String &rhs){
     std::cout << "Copy Assignment" << std::endl;
     if(this == &rhs)
@@ -139,7 +139,6 @@ std::cout << "************************"<<std::endl;
     str5 = str1+str2 ;
     std::cout <<str5.get_string() <<std::endl;
 std::cout << "************************"<<std::endl;
-
 
 
 return 0;
