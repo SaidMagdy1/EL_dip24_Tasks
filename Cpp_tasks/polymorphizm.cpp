@@ -17,7 +17,7 @@ Base(int a)
     std::cout << "Base Parm Constructor "<< a << std::endl;
 }
 
-//whenever use virual fun U should use virtual destructor as well .
+//whenever use virtual fun U should use virtual destructor as well .
 virtual ~Base(){
     std::cout << "Base Destructor "<< std::endl;
 }
@@ -63,7 +63,5 @@ std::cout << "-----------------------------------" <<std::endl;
     Base &ref2=obj2;
     ref2.greeting();
 std::cout << "-----------------------------------" <<std::endl;
-
-
     return 0;
 }
