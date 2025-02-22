@@ -18,7 +18,9 @@ char* get_string();
 String& operator=(const String &rhs);
 String& operator=(String &&rhs);
 bool operator==(const String &rhs)const;
-String operator+(const String &rhs);
+String operator+(const String &rhs)const;
+String operator>(const String &rhs)const;
+String operator>(String &&rhs);
 private:
 };
 //----------------------------------
@@ -43,7 +45,7 @@ String& String::operator=(String &&rhs){
     return *this;
 }
 
-String String::operator+(const String &rhs){
+String String::operator+(const String &rhs) const{
     std::cout << "------It is + Operator" << std::endl;
     size_t buff_size= std::strlen(str)+std::strlen(rhs.str)+1;
     char *buff = new char[buff_size];
@@ -56,10 +58,37 @@ String String::operator+(const String &rhs){
 
 bool String::operator==(const String &rhs)const{
     std::cout << "------It is == Operator" << std::endl;
-    if(std::strcmp(str,rhs.str)==0)
-        return true;
-    else
-        return false;
+    return (std::strcmp(str,rhs.str)==0); 
+}
+
+String String::operator>(const String &rhs)const{
+    if(std::strcmp(str,rhs.str)==0){
+        std::cout << " Both are equal ";
+        return "equal";
+    }
+    else  if(std::strcmp(str,rhs.str)>0){
+        std::cout << str<< " greater than "<< rhs.str << std::endl;
+        return "greater";
+    }
+    else{
+        std::cout << str<< " is not greater than "<< rhs.str << std::endl;
+        return "less";
+    }
+}
+String String::operator>(String &&rhs){
+    std::cout << "the R-V grater operator \n";
+    if(std::strcmp(str,rhs.str)==0){
+        std::cout << " Both are equal ";
+        return "equal";
+    }
+    else if (std::strcmp(str,rhs.str)>0){
+        std::cout << str<< " greater than "<< rhs.str << std::endl;
+        return "greater";
+    }
+    else{
+        std::cout << str<< " is not greater than "<< rhs.str << std::endl;
+        return "less";
+    }
 }
 
 
@@ -69,8 +98,8 @@ String::String()
     :str{nullptr}
 {
     std::cout << "Default Constructor" << std::endl;
- str = new char[1];
-  *str = '\0';
+    str = new char[1];
+    *str = '\0';
 }
 
 String::String(const char *strr)
@@ -139,6 +168,9 @@ std::cout << "************************"<<std::endl;
     str5 = str1+str2 ;
     std::cout <<str5.get_string() <<std::endl;
 std::cout << "************************"<<std::endl;
+String cmp= str1 > str3;
+cmp= str1 > String{"said"};
+//cmp= str1 > std::Move(str3);
 
 
 return 0;

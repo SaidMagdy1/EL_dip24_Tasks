@@ -51,10 +51,10 @@ int Int::operator++(int a)
 }
 
 int main(){
-
-    Int m1;
-    m1++;
+    int value{0};
+    Int m1{10};
     ++m1;
-    std:: cout << "value : " << m1.value << std::endl;
+    value = m1++;  //make sure that the post is working properly
+    std:: cout << "value : " << value <<" class_value : "<< m1.value << std::endl;
     return 0;
 }
