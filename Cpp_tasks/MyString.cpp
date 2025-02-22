@@ -18,7 +18,8 @@ char* get_string();
 String& operator=(const String &rhs);
 String& operator=(String &&rhs);
 bool operator==(const String &rhs)const;
-String operator+(const String &rhs)const;
+String operator+(const String &rhs);
+String &operator+=(const String &rhs);
 String operator>(const String &rhs)const;
 String operator>(String &&rhs);
 private:
@@ -45,7 +46,7 @@ String& String::operator=(String &&rhs){
     return *this;
 }
 
-String String::operator+(const String &rhs) const{
+String String::operator+(const String &rhs) {
     std::cout << "------It is + Operator" << std::endl;
     size_t buff_size= std::strlen(str)+std::strlen(rhs.str)+1;
     char *buff = new char[buff_size];
@@ -54,6 +55,10 @@ String String::operator+(const String &rhs) const{
     String temp{buff};
     delete[] buff;
     return temp;
+}
+String &String::operator+=(const String &rhs){
+      *this = *this + rhs;
+      return *this;         
 }
 
 bool String::operator==(const String &rhs)const{
@@ -140,7 +145,7 @@ String::~String()
 {
     std::cout << "Destructor" << std::endl;
     delete[] str;
-    str = nullptr;
+
 }
 
 
@@ -170,7 +175,9 @@ std::cout << "************************"<<std::endl;
 std::cout << "************************"<<std::endl;
 String cmp= str1 > str3;
 cmp= str1 > String{"said"};
-//cmp= str1 > std::Move(str3);
+
+cmp+=str1;
+std::cout <<cmp.get_string() <<std::endl;
 
 
 return 0;
