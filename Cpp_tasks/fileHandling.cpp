@@ -26,21 +26,21 @@ int main(){
     if(file.is_open()){
         std::cout << "file is opened successfuily"<<std::endl;;
         std::string line;
-        while (file.good())
+        while (!file.eof())
         {
             getline(file,line);
             std::cout << line <<std::endl;
-            std::cout << file.tellg() <<std::endl;
+           // std::cout << file.tellg() <<std::endl; // tell U the posision of the cursor
         }
         file.seekg(0); //set the cursor to the begining again
         getline(file,line);   //make sure that the cursor set to start  so get the first line again
         std::cout << line <<std::endl;
-
+        file.close();
     }
     else
         std::cout << "file is not opened ";
 
-    file.close();
+    
 
  return 0;
 }

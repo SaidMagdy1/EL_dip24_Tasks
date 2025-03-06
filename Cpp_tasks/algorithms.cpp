@@ -2,12 +2,14 @@
 #include <algorithm>
 #include <vector>
 #include <array>
+#include <list>
 
 
 int main(){
     std::array<int ,6>arr{1,2,3,4,5,6};
     std::vector<int>V{2,2,3,4,5,6};
     std::vector<int>sub_v{55,6};
+    //int *ptr = V.begin(); //its Error cuz its iterator so use auto ptr or std::vector<int>::iterator ptr ;
     //non-modifing algorithms
     std::cout << std::all_of(V.begin(),V.end(),[](int i){return i>1;})<<std::endl; //this return true if all of elments greater than 1
     std::cout << std::any_of(V.begin(),V.end(),[](int i){return i>1;})<<std::endl; //this return true if any of elments greater than 1
