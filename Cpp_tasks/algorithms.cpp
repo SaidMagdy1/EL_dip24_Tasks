@@ -7,7 +7,7 @@
 
 int main(){
     std::array<int ,6>arr{1,2,3,4,5,6};
-    std::vector<int>V{2,2,3,4,5,6};
+    std::vector<int>V{2,2,3,4,5,6,2};
     std::vector<int>sub_v{55,6};
     //int *ptr = V.begin(); //its Error cuz its iterator so use auto ptr or std::vector<int>::iterator ptr ;
     //non-modifing algorithms
@@ -41,6 +41,11 @@ int main(){
     }catch(...){
         std::cout << "other exception " << std::endl;
         
+    }
+
+    std::replace(std::begin(V),std::end(V),2,222);
+    for(auto rep:V){
+        std::cout <<rep<<std::endl;
     }
 
 
