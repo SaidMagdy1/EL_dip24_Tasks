@@ -3,6 +3,19 @@
 #include <list>
 #include <map>
 #include <algorithm>
+#include <array>
+
+
+// a generic displayer
+template<typename T> 
+void display(T container){
+    std::cout << "[";
+    for(const auto &con : container){
+        std::cout << " "<<con ;
+    }
+    std::cout << " ]"<<std::endl;
+}
+
 
 template<typename T>  
 void fun_name(T a){
@@ -42,8 +55,15 @@ std::ostream& operator<<(std::ostream &os, const Person &rhs){
 
 int main(){
 
-    std::vector<int>vec{1,2,3,4,5};
+    std::vector<int>vec{1,2,3,4,5,6,7,8,9,10};
     std::list<std::string> names{"said","magdy","shhata"};
+    std::array<int,5>arr{1,2,3,4,5};
+
+    auto min = std::min_element(arr.begin(),arr.end());
+    auto max = std::max_element(arr.begin(),arr.end());
+
+    std::cout << "minimum: " << *min <<"  maximum: "<<*max <<std::endl;
+    std::cout << "Row pointer for 1st element: " << arr.data() <<std::endl;
 
     std::cout << "-------------- List of Person ----------------"<<std::endl;
     std::list<Person>men{
@@ -87,7 +107,11 @@ int main(){
     std::cout << "-------------- Lambda Expression----------------"<<std::endl;
     std::for_each(vec.begin(),vec.end(),[](int a){std::cout <<a+a<<std::endl;});
 
-
+    std::cout << "-------------- Vector cases ----------------"<<std::endl;
+    std::vector<int>copy(vec.size());
+    std::copy(vec.begin(),vec.end(),copy.begin()); // copy vector must be sized 
+    copy.emplace_back(150);
+    display(copy);
 
     return 0;
 }
