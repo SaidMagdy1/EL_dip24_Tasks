@@ -4,6 +4,7 @@
 #include <map>
 #include <algorithm>
 #include <array>
+#include <set>
 
 
 // a generic displayer
@@ -39,8 +40,9 @@ class Person{
     bool operator==(const Person &rhs){
         return ((name== rhs.name) && (age==rhs.age));
     }
-   //friend std::ostream& operator<<(std::ostream &os, const Person &rhs);
-   //std::ostream& operator<<(std::ostream &os);
+    bool operator<(const Person &rhs){
+        return (age < rhs.age);
+    }
 };
 
 std::ostream& operator<<(std::ostream &os, const Person &rhs){
@@ -48,10 +50,6 @@ std::ostream& operator<<(std::ostream &os, const Person &rhs){
     return os;
 }
 
-// std::ostream& Person::operator<<(std::ostream &os){
-//         os << "[ " << name << "," << age << " ] " << std::endl;
-//         return os;
-//     }
 
 int main(){
 
@@ -112,6 +110,23 @@ int main(){
     std::copy(vec.begin(),vec.end(),copy.begin()); // copy vector must be sized 
     copy.emplace_back(150);
     display(copy);
+
+    std::cout << "-------------- std::set cases ----------------"<<std::endl;
+    std::set<int>si{1,4,5,6,7,1,2};
+    for(auto e: si){
+        std::cout <<e;
+    }
+    std::cout <<std::endl;
+    auto it_p = si.insert(200); // in Set insert it returns pair(iterator,bool)
+    std::cout << std::boolalpha <<*it_p.first<<std::endl;
+    std::cout <<it_p.second<<std::endl;
+
+    //Don't forget that set will sort so you need operator< in your class 
+    // std::set<Person> s {
+    //     {"said",25},
+    //     {"magdy",55},
+    //     {"mohamed",15}
+    // };
 
     return 0;
 }

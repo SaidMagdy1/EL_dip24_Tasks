@@ -22,10 +22,25 @@ String operator+(const String &rhs);
 String &operator+=(const String &rhs);
 String operator>(const String &rhs)const;
 String operator>(String &&rhs);
+
+friend std::istream& operator>>(std::istream& in,String &source);
+friend std::ostream& operator<<(std::ostream& out,const String &source);
+
 private:
 };
 //----------------------------------
+//here the friend i&o stream operator overloading
+std::istream& operator>>(std::istream& in,String &source){
+    in >> source.str ;
+    return in;
+}
+
+std::ostream& operator<<(std::ostream& out,const String &source){
+    out << source.str ;
+    return out;
+}
 // here the operators 
+
 String& String::operator=(const String &rhs){
     std::cout << "Copy Assignment" << std::endl;
     if(this == &rhs)
@@ -178,6 +193,10 @@ cmp= str1 > String{"said"};
 
 cmp+=str1;
 std::cout <<cmp.get_string() <<std::endl;
+
+String inText;
+std::cin >> inText;
+std::cout <<"here ostream operator<<" <<inText<<std::endl;
 
 
 return 0;

@@ -12,6 +12,11 @@ Int(const Int &source);
 int operator++();
 int operator++(int a);
 
+friend std::istream& operator>>(std::istream& in,Int &source){
+    in >> source.value ;
+    return in;
+}
+
 private:
 };
 //Constructors
@@ -56,5 +61,8 @@ int main(){
     ++m1;
     value = m1++;  //make sure that the post is working properly
     std:: cout << "value : " << value <<" class_value : "<< m1.value << std::endl;
+    Int m2;
+    std::cin >>m2;
+    std:: cout << " class_value input stream : "<< m2.value << std::endl;
     return 0;
 }
